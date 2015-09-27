@@ -25,9 +25,8 @@ fibonacci:
 	mov r3, r4	    	 @R3 = R4
 	mov r4, r5	    	 @R4 = R5
 	adds r2, r2, #4294967295 @R2 = R2 - 1
-	cmp r2, #0	    	 @If (R2 > 0) goto .Loop
-	bne .Loop	    	 @else return R5
-	mov r0, r5
+	bgt .Loop	    	 @If (R2 >= 0) goto .Loop
+	mov r0, r5		 @else return R5
 
 	pop {r2, r3, r4, r5, pc}
 
