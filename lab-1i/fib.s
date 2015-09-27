@@ -13,8 +13,8 @@ fibonacci:
 	@ PROLOG
 	push {r4, r5, r6, r7, lr}
 	
-	mov r5, #0          	 @R5 = 0 (fib(0))
-	mov r6, #1	    	 @R6 = 1 (fib(1))
+	mov r5, #0          	 @R5 = 0
+	mov r6, #1	    	 @R6 = 1
 	adds r4, r0, #4294967295 @R4 = R0 - 1
 	bgt .Loop	    	 @If (R4 > 1) goto .Loop
 			    	 @else return R0
